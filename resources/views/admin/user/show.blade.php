@@ -54,6 +54,14 @@
                             </tr>
                             <tr>
                                 <th>
+                                    {{ trans('cruds.user.fields.date_of_birth') }}
+                                </th>
+                                <td class="dark:text-light">
+                                    {{ $user->date_of_birth }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
                                     {{ trans('cruds.user.fields.roles') }}
                                 </th>
                                 <td>

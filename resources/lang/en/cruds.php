@@ -69,6 +69,8 @@ return [
             'class_helper'             => ' ',
             'country'                  => 'Country',
             'country_helper'           => ' ',
+            'date_of_birth'            => 'Date Of Birth',
+            'date_of_birth_helper'     => ' ',
         ],
     ],
     'systemSetting' => [

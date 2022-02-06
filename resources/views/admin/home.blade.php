@@ -48,6 +48,10 @@
             {{ $chart1->renderHtml() }}
         </div>
 
+        <div class="w-full">
+            {{ $chart2->renderHtml() }}
+        </div>
+
 
 
     </div>
@@ -61,4 +65,5 @@
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     {{ $chart1->renderJs() }}
+    {{ $chart2->renderJs() }}
 @endpush

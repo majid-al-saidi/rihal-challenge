@@ -36,8 +36,8 @@ class HomeController
         $top_data = array_slice($data, 0, 10);
 
 
-        $user = User::find(2);
-        dd($user);
+        // $user = User::find(2);
+        // dd($user);
 
         
 

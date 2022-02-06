@@ -40,6 +40,16 @@
             {{ trans('cruds.user.fields.roles_helper') }}
         </div>
     </div>
+    <div class="form-group {{ $errors->has('user.date_of_birth') ? 'invalid' : '' }}">
+        <label class="form-label" for="date_of_birth">{{ trans('cruds.user.fields.date_of_birth') }}</label>
+        <x-date-picker class="form-control" wire:model="user.date_of_birth" id="date_of_birth" name="date_of_birth" picker="date" />
+        <div class="validation-message">
+            {{ $errors->first('user.date_of_birth') }}
+        </div>
+        <div class="help-block">
+            {{ trans('cruds.user.fields.date_of_birth_helper') }}
+        </div>
+    </div>
     <div class="form-group {{ $errors->has('user.class_id') ? 'invalid' : '' }}">
         <label class="form-labeldark:text-light " for="class">{{ trans('cruds.user.fields.class') }}</label>
         <x-select-list class="form-control" id="class" name="class" :options="$this->listsForFields['class']" wire:model="user.class_id" />

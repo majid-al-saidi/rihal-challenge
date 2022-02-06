@@ -48,7 +48,7 @@
                     <tr>
                         <th class="w-9">
                         </th>
-                        <th class="w-28">
+                        <th class="w-20">
                             {{ trans('cruds.user.fields.id') }}
                             @include('components.table.sort', ['field' => 'id'])
                         </th>
@@ -60,12 +60,16 @@
                             {{ trans('cruds.user.fields.email') }}
                             @include('components.table.sort', ['field' => 'email'])
                         </th>
-                        <th>
+                        {{-- <th>
                             {{ trans('cruds.user.fields.email_verified_at') }}
                             @include('components.table.sort', ['field' => 'email_verified_at'])
-                        </th>
+                        </th> --}}
                         <th>
                             {{ trans('cruds.user.fields.roles') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.user.fields.date_of_birth') }}
+                            @include('components.table.sort', ['field' => 'date_of_birth'])
                         </th>
                         <th>
                             {{ trans('cruds.user.fields.class') }}
@@ -102,13 +106,16 @@
                                     {{ $user->email }}
                                 </a>
                             </td>
-                            <td>
+                            {{-- <td>
                                 {{ $user->email_verified_at }}
-                            </td>
+                            </td> --}}
                             <td>
                                 @foreach($user->roles as $key => $entry)
                                     <span class="badge badge-relationship">{{ $entry->title }}</span>
                                 @endforeach
+                            </td>
+                            <td>
+                                {{ $user->date_of_birth }}
                             </td>
                             <td>
                                 @if($user->class)
