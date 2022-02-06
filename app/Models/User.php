@@ -131,6 +131,6 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function getAgeAttribute()
     {
-         return $this->birthDate->age;
+         return $this->date_of_birth->age;
     }
 }
