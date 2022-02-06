@@ -36,9 +36,8 @@ class HomeController
         $top_data = array_slice($data, 0, 10);
 
 
-        // $user = User::find(2);
-        // dd($user);
 
+        $average_age = $this->avrageStudentsAge();
         
 
         //charts:
@@ -78,7 +77,7 @@ class HomeController
 
 
 
-        return view('admin.home', ['chart1' => $chart1 , 'top_data' => $top_data , 'chart2' => $chart2 ]);
+        return view('admin.home', ['chart1' => $chart1 , 'top_data' => $top_data , 'chart2' => $chart2 , 'average_age' => $average_age ]);
     }
 
 
@@ -94,5 +93,19 @@ class HomeController
             } else {
             }
         }
+    }
+
+    //to get the avrg:
+    public function avrageStudentsAge()
+    {
+
+        $students = User::whereHas('roles', function($role) {
+            $role->where('title', '=', 'Student');
+        })->get();
+
+        return $students->average(function ($student) {
+            return $student->age;
+        });
+       
     }
 }
