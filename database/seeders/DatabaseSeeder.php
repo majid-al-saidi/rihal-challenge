@@ -15,8 +15,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             RoleUserTableSeeder::class,
             CountriesTableSeeder::class,
+            StudentClassesTableSeeder::class,
         ]);
-        $this->call(UsersTableSeeder::class);
-        $this->call(StudentClassesTableSeeder::class);
     }
 }
