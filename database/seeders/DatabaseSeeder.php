@@ -13,9 +13,11 @@ class DatabaseSeeder extends Seeder
             RolesTableSeeder::class,
             PermissionRoleTableSeeder::class,
             UsersTableSeeder::class,
+            Students::class,
             RoleUserTableSeeder::class,
             CountriesTableSeeder::class,
             StudentClassesTableSeeder::class,
+            
         ]);
     }
 }
