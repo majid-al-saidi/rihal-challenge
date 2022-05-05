@@ -12,7 +12,7 @@
 
             </div>
 
-            <div class="">
+            <div>
                 <div class="pt-3">
                     <table class="table table-view w-full">
                         <tbody >
