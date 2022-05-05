@@ -27,7 +27,7 @@ class UserFactory extends Factory
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
-            'date_of_birth' => $this->faker->dateTimeBetween('-45 years','-18 years')->format('d-m-Y'),
+            'date_of_birth' => $this->faker->dateTimeBetween('-45 years','-18 years')->format('Y-m-d'),
             'class_id' => $this->faker->unique()->numberBetween(1, 10),
             'country_id' => $this->faker->unique(true)->numberBetween(1, 247),
             'password' => bcrypt($this->faker->password),
