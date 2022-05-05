@@ -14,8 +14,9 @@ Route::redirect('/', '/login');
 
 Auth::routes(['register' => false]);
 
-Route::get('kwd' , [HomeController::class , 'kwd_index']);
-Route::get('changerole', [HomeController::class, 'changeRole'])->name('changeRole');
+// Route::get('kwd' , [HomeController::class , 'kwd_index']);
+// Route::get('majid' , [HomeController::class , 'index']);
+// Route::get('changerole', [HomeController::class, 'changeRole'])->name('changeRole');
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
