@@ -97,6 +97,7 @@ class User extends Authenticatable implements HasLocalePreference
 
     public function setDateOfBirthAttribute($value)
     {
+        //$this->attributes['date_of_birth'] = $value ? Carbon::createFromFormat(config('project.date_format'), $value)->format('Y-m-d') : null;
         $this->attributes['date_of_birth'] = $value ? Carbon::createFromFormat(config('project.date_format'), $value)->format('Y-m-d') : null;
     }
 
@@ -117,7 +118,7 @@ class User extends Authenticatable implements HasLocalePreference
 
     protected function serializeDate(DateTimeInterface $date)
     {
-        return $date->format('Y-m-d H:i:s');
+        return $date->format('Y-m-d');
     }
 
     protected static function boot()
