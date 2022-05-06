@@ -44,7 +44,7 @@ e.	Eloquent ORM (Laravel default).
 
 ## Usage
 
-The admin can CRUD users as student, CRUD class, CRUD countries. the application will show some useful charts.
+The admin can CRUD users as student, CRUD class, CRUD countries. the application will show some useful charts. Default login: email: admin@admin.com , password: password.
 
 ## Tools used and why
 - This project used **SQLlite**  to help deploy the project without need to configure laravel with mysql database.
